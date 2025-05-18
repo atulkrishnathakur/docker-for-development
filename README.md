@@ -139,4 +139,14 @@ networks:
 
 2. `restart: unless-stopped` command used for developement. It is better for development. It is better for debuging. If you want to stop container manually then it will not again start automatically. It will start automatically when system reboot. When you deploy for production then use `restart: always`
 
+# How to debug or see errors in terminal after reload
+1. see the log in docker. command `docker compose logs`
+```
+atul@atul-Lenovo-G570:~/microhub/microhub-user-management$ docker compose logs
 
+```
+2. If you want to see reload of container in terminal then run once the command ` docker logs -f <container name or id>`. Press Ctrl+C to exit. here you will see live reload in and error. 
+```
+atul@atul-Lenovo-G570:~/microhub/microhub-user-management$ docker logs -f microhubusermanagementcontainer
+
+``` 
